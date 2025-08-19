@@ -22,7 +22,7 @@ return new class extends Migration
             $table->enum('status', ['sent', 'failed', 'pending'])->default('pending');
             $table->timestamp('sent_at')->nullable();
 
-            $table->foreignId('sent_by')->nullable()
+            $table->foreignUlid('sent_by')->nullable()
                 ->constrained('users')
                 ->nullOnDelete(); // Can be null if system-automated
 
