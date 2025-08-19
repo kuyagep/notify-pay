@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             DepartmentSeeder::class,
             PositionSeeder::class,
             BankSeeder::class,
+            BenefitTypeSeeder::class,
         ]);
     }
 }
