@@ -36,7 +36,7 @@ Built with **Laravel**, Notify-Pay ensures transparency, accountability, and fas
 ## ⚙️ Installation
 ```bash
 # Clone repository
-git clone https://github.com/your-username/notify-pay.git
+git clone https://github.com/kuyagep/notify-pay.git
 
 # Navigate into project
 cd notify-pay
