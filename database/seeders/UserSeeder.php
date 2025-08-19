@@ -22,10 +22,20 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('password'), // ⚠️ Change in production
             ]
         );
+        $user = User::firstOrCreate(
+            ['email' => 'user@gmail.com'],
+            [
+                'name' => 'System User',
+                'password' => Hash::make('password'), // ⚠️ Change in production
+            ]
+        );
 
         // Assign role to admin (make sure roles are seeded first)
         if (! $admin->hasRole('admin')) {
             $admin->assignRole('admin');
+        }
+        if (! $user->hasRole('user')) {
+            $user->assignRole('user');
         }
     }
 }

@@ -53,6 +53,7 @@ class AppPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                \Spatie\Permission\Middleware\RoleMiddleware::using('user')
             ]);
     }
 }
